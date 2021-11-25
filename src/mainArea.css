@@ -1,0 +1,21 @@
+.header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--dark-blue);
+    color: var(--pink);
+    font-size: 1rem;
+}
+
+.main-area {
+    position: relative;
+    min-height: 90vh;
+    width: 100vw;
+    overflow: auto;
+    background: var(--background-color);
+}
+
+.content {
+    min-height: 80vh;
+}
