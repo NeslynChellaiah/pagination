@@ -35,7 +35,7 @@ const Controls = ({getData}) => {
             document.getElementById('prev').style.cursor = 'default'
             document.getElementById('next').style.color = '#396EB0'  
             document.getElementById('next').style.cursor = 'pointer' 
-        } else if (pageNumber === 5) {
+        } else if (pageNumber === n) {
             document.getElementById('next').style.color = 'grey' 
             document.getElementById('next').style.cursor = 'default'
             document.getElementById('prev').style.color = '#396EB0'
