@@ -15,6 +15,16 @@ li {
     margin: 0 1em;
     list-style: none;
     font-size: 1em;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.cur-page {
+    background: var(--pink);
 }
 
 .icon {
@@ -24,4 +34,8 @@ li {
 li, .icon {
     cursor: pointer;
     color: var(--dark-blue);
+}
+
+li:active {
+    color: var(--pink);
 }

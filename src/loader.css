@@ -1,0 +1,43 @@
+.loader {
+    height: 100%;
+    width: 100vw;
+    background: var(--background-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+}
+
+.dot {
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    background: var(--blue);
+}
+
+.dot1 {
+    animation: 1000ms bounce ease-in-out infinite;
+}
+
+.dot2 {
+    animation: 1000ms bounce 100ms ease-in-out infinite;
+}
+
+.dot3 {
+    animation: 1000ms bounce 200ms ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%   {transform: translateY(0);}
+    50%  {transform: translateY(-2em);}
+    100% {transform: translateY(0);}
+}

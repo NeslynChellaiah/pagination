@@ -1,12 +1,15 @@
 import './card.css'
 
-const Card = () => {
-    return (
-        <section className='cards'>
-            <div className='card'>
-                
+const Card = ({login, img, html_url}) => {
+    return (        
+        <div className='card'>
+            <div className='avatar-container'>
+                <img alt={login+" avatar"} src={img} className='avatar'/>
             </div>
-        </section>
+            <div className='login'>
+                id: <a href={html_url} target="_blank" rel='noreferrer'>{login}</a>
+            </div>
+        </div>
     );
 }
 
