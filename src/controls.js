@@ -1,7 +1,6 @@
 import './controls.css';
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
-import { useState } from 'react/cjs/react.development';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Controls = ({getData}) => {
 
