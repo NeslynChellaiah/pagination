@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 const Controls = ({getData}) => {
 
     const [pageNumber, setPageNumber] = useState(1)
+    const n = 5;
 
     const pageNumberChanged = (newPage) => {
         if(newPage !== pageNumber){
@@ -22,7 +23,7 @@ const Controls = ({getData}) => {
         }
     }
     const nextClicked = () => {
-        if (pageNumber < 5) {
+        if (pageNumber < n) {
             pageNumberChanged(pageNumber + 1)
             setPageNumber(pageNumber + 1)
         }
@@ -51,11 +52,14 @@ const Controls = ({getData}) => {
         <div className="controls">
             <AiOutlineLeft className='icon' id='prev' onClick={prevClicked}/>
             <ul>
-                <li id="page1" onClick={()=>pageNumberChanged(1)} className='cur-page'>1</li>
-                <li id="page2" onClick={()=>pageNumberChanged(2)}>2</li>
-                <li id="page3" onClick={()=>pageNumberChanged(3)}>3</li>
-                <li id="page4" onClick={()=>pageNumberChanged(4)}>4</li>
-                <li id="page5" onClick={()=>pageNumberChanged(5)}>5</li>
+                {
+                    [...Array(n)].map((number, index) => {
+                            return (
+                                <li id={"page" + (index+1)} onClick={()=>pageNumberChanged(index+1)} className={index+1 === 1 ? 'cur-page' : ''} key={index+1}>{index+1}</li>
+                            )
+                        }
+                    )
+                }
             </ul>
             <AiOutlineRight className='icon' id='next' onClick={nextClicked}/>
         </div>
